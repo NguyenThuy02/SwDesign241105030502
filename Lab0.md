@@ -1,4 +1,4 @@
-Bài tập thực hành 1 - Tên bài: Lab0.md  
+Bài tập thực hành 1 
 
 - Sơ đồ lớp  
 ![Diagram](https://www.planttext.com/api/plantuml/png/UhzxlqDnIM9HIMbk3XTNSNPcda9HVd4g5rT9PabEge9pJc9niO9BPc9wKM8k5nTNCfZlc9UPcvYZKCsbeA3Wab-Q15IOaPgPdb62950E5oZBpqnHyCqlIzNGX7E32r8Jiu7yMfYHpeab4FC8g7P8pKi1EXK0003__mC0)  
