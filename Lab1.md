@@ -26,7 +26,7 @@
  Đường liên kết của sơ đồ: https://www.planttext.com/api/plantuml/png/X5FDIWCn4BxdAORS-mOYhRiz22sK8dWUiqE8cqn2aaKMySay-4Y-WcbLtDRzkMQ-dvdl8v_l7-kKCUREMI5IQpXWH0SfzvOW-aH215GjQW9PMKESOOSzHGcl0Y2IoiYwGEMHWe_Pi8QzRpfBydByQBZnBmbgIcts0JOXMACm6yzIl0rCxhfac5A2dTT6JPWTi8_UMZX4hmhsvBfbNNXNhW_6aSBOm1wvgBko_XMYyiwPek0PAhIgioChtNCc7S-3wNrEsiDzVbCO2jMO4JPAdS_x4shAynEc0jYwO7rF1FNFaxmO5_ddOZguPW0iHlzBWDNgTZQksMAMsTEpR-ve0OkigL8MYJCzZ6GBDyltpII-J1ThugRyh2y0003__mC0
   
 - Code:    
-`@startuml  
+```@startuml  
 skinparam style rose  
 package "Client Layer" {  
   rectangle "Reporting Module"  
@@ -56,7 +56,7 @@ package "Data Access Layer" {
 "Employee Database" <--> "Payroll Processing Engine"  
 "Project Management Database" <--> "Payroll Processing Engine"  
   
-@enduml`  
+@enduml```
 
 2. Cơ chế phân tích
 Các cơ chế cần giải quyết trong bài toán và giải thích lý do:    
