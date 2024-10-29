@@ -92,7 +92,7 @@ Các cơ chế cần giải quyết trong bài toán và giải thích lý do:
 - Lý do: Đảm bảo quá trình thanh toán diễn ra chính xác, đúng lịch trình và theo nhu cầu của từng nhân viên.  
   
 3. Phân tích ca sử dụng Payment
-- Xác định các lớp phân tích:  
+Xác định các lớp phân tích:  
 3.1. Employee (Nhân viên)  
 Thuộc tính:   
 - employeeID: ID của nhân viên.  
@@ -114,12 +114,12 @@ Phương pháp:
 - getPaymentMethods(): Lấy sẵn danh sách thanh toán phương thức.  
 Quan hệ: Tương tác Employeevà PaymentMethod.  
 
-- Biểu đồ lớp mô tả các lớp phân tích và quan hệ:  
+Biểu đồ lớp mô tả các lớp phân tích và quan hệ:  
 •  Employee có quan hệ 1-1 với PaymentMethod (mỗi nhân viên chỉ có một phương thức thanh toán).  
 •  PaymentMethod có quan hệ 1-1 với Employee.  
 •  PaymentSystem tương tác với cả Employee và PaymentMethod để cập nhật và lấy thông tin.  
 
-- Nhiệm vụ của từng lớp phân tích  
+Nhiệm vụ của từng lớp phân tích  
 •	Employee: Tương tác với hệ thống để chọn và cập nhật phương thức toán toán.  
 •	PaymentMethod: Lưu trữ thông tin liên quan đến phương thức thanh toán mà nhân viên đã chọn.  
 •	PaymentSystem: Xử lý logic để cập nhật và xác thực phương thức thanh toán cho nhân viên.  
@@ -155,7 +155,7 @@ PaymentSystem ..> PaymentMethod : interacts with
 @enduml  
 ```
 4. Phân tích ca sử dụng Maintain Timecard  
-- Xác định các lớp phân tích:  
+Xác định các lớp phân tích:  
 
 4.1. Employee (Nhân viên): Đại diện cho nhân viên tương tác với hệ thống để nhập hoặc gửi thẻ chấm công.  
 Thuộc tính:  
@@ -196,13 +196,13 @@ Phương pháp:
 - saveTimecard(timecard): Lưu thẻ chấm công  
 - submitTimecard(timecard): Gửi thẻ chấm công  
 
-- Biểu đồ lớp mô tả các lớp phân tích và quan hệ:  
+Biểu đồ lớp mô tả các lớp phân tích và quan hệ:  
 •	Employee có quan hệ 1-nhiều với Timecard (một nhân viên có thể có nhiều thẻ chấm công trong các kỳ lương khác nhau).  
 •	Timecard có quan hệ 1-nhiều với TimecardEntry (một thẻ chấm công có nhiều dòng nhập thời gian cho công việc từng ngày).  
 •	TimecardEntry có quan hệ n-1 với ChargeNumber (một dòng nhập có thể liên kết với một công cụ mã hóa).  
 •	TimecardSystem và Project ManagementDB là hai lớp quản lý hệ thống xử lý các yêu cầu từ phía Employee.  
 
-- Nhiệm vụ của từng lớp phân tích  
+Nhiệm vụ của từng lớp phân tích  
 •	Employee: Tương tác với hệ thống để nhập, cập nhật và gửi thẻ chấm công.  
 •	Timecard: Lưu trữ thông tin về thời gian làm việc, trạng thái và kỳ lương.  
 •	TimecardEntry: Ghi nhận chi tiết từng ngày làm việc và số giờ làm cho mã chi phí.  
