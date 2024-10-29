@@ -25,8 +25,8 @@
 
  Đường liên kết của sơ đồ: https://www.planttext.com/api/plantuml/png/X5FDIWCn4BxdAORS-mOYhRiz22sK8dWUiqE8cqn2aaKMySay-4Y-WcbLtDRzkMQ-dvdl8v_l7-kKCUREMI5IQpXWH0SfzvOW-aH215GjQW9PMKESOOSzHGcl0Y2IoiYwGEMHWe_Pi8QzRpfBydByQBZnBmbgIcts0JOXMACm6yzIl0rCxhfac5A2dTT6JPWTi8_UMZX4hmhsvBfbNNXNhW_6aSBOm1wvgBko_XMYyiwPek0PAhIgioChtNCc7S-3wNrEsiDzVbCO2jMO4JPAdS_x4shAynEc0jYwO7rF1FNFaxmO5_ddOZguPW0iHlzBWDNgTZQksMAMsTEpR-ve0OkigL8MYJCzZ6GBDyltpII-J1ThugRyh2y0003__mC0
   
-- Code:    
-```@startuml  
+```- Code:    
+@startuml  
 skinparam style rose  
 package "Client Layer" {  
   rectangle "Reporting Module"  
@@ -56,7 +56,8 @@ package "Data Access Layer" {
 "Employee Database" <--> "Payroll Processing Engine"  
 "Project Management Database" <--> "Payroll Processing Engine"  
   
-@enduml```
+@enduml
+```
 
 2. Cơ chế phân tích
 Các cơ chế cần giải quyết trong bài toán và giải thích lý do:    
@@ -128,8 +129,8 @@ o	getPaymentMethods(): Lấy sẵn danh sách thanh toán phương thức.
 
 - Đường liên kết của sơ đồ: https://www.planttext.com/api/plantuml/png/V551Ri8m4Bpx5IjE81KahbQ5EBG7f1OXmGUMU9LOZPt8km55Y9Tnw9FuGXiIqZfKzSNQ6NjcTlTw-LooO93AvIh9aHbUNPaNDH6S53I7kdhrec4hmVgqnJqwYf4IQqTUtacomcZO_2xLMNNw4NmtSRTgLvS3IJGc47CCxj5_h1_SCKcAoikwSdiAFJMqtTOivEwsLMbGA4eqVkptwT_E9XeEXJMjO4eIaJp-fjyiotC4BvfS_Q17yn5CfxSh7ew635d5oMUpnS-AD5Wl530HXgELx8-tGyN1XoLvq-p-2m00__y30000
   
-- Code:     
-`@startuml  
+```- Code:     
+@startuml  
 class Employee {  
     +employeeID: String  
     +name: String  
@@ -152,7 +153,7 @@ Employee "1" -- "1" PaymentMethod : has
 PaymentSystem ..> Employee : interacts with  
 PaymentSystem ..> PaymentMethod : interacts with    
 @enduml  
-`  
+```
 4. Phân tích ca sử dụng Maintain Timecard  
 - Xác định các lớp phân tích:  
 
@@ -216,8 +217,8 @@ o	submitTimecard(timecard): Gửi thẻ chấm công
 
 
 
-- Code:  
-`@startuml  
+```- Code:  
+@startuml  
 class Employee {  
     +employeeID: String  
     +name: String  
@@ -259,7 +260,8 @@ TimecardEntry "1" -- "1" ChargeNumber : linked to
 TimecardSystem ..> Employee : interacts with  
 TimecardSystem ..> Timecard : interacts with  
 TimecardSystem ..> ProjectManagementDB : retrieves from  
-@enduml  `
+@enduml  
+```
 
 5. Hợp nhất kết quả phân tích   
 5.1. Employee (Nhân viên)  
@@ -333,8 +335,8 @@ Tương tác PaymentMethodđể lưu và lấy thông tin chi tiết về các p
 
 - Đường liên kết của sơ đồ: https://www.planttext.com/api/plantuml/png/Z5JDJjmm4BxdAQoSA2ehzHeXHEbog5GG4aWzpph3nX3RaJtPAgfuCWuyKby1PnCdjXDHzf3LZB_vyJVV-D_hswKbCDJAEkCrMCkkPLFh3f7zpLZ_mz7-kItOFHcXzeDVWSJOqsWhI6YLUA6JgEW6gT9bmUv2Ctl9ngeFGY87K_ggDDffrMEpMo1Nkl-EBQeoTJaSjJQ9RNTIXC6BwjUAJETRA9EKbMwD_QtDCxfh24M3brTWzdZRoXsQWlq8h3bzwFNPmxZqaYLQRaGJSJabkpFw2JdTW88zzbHkhtpEFTBt0uWQTZM6DUt9buBz4fREG-_5ylxtdIMKFfr1LneFw4zFbb9mUVtfo344U3_46UJm1otAS1wVGCzt3yNZsvH7ww5h4Zb2MHgqYGPse9vl5ye5pdMho4znGVbGDcQdRNg1H1sj4FJrG_r7TBZfHOVpr2BtSMpJakRVSdPsvlusczDytgA2LM2poLn73Mel6DUAGAWPFnnCGNaiu8BLGhabOAIpH3YRpSNyVXoN10rmikoFe6eD73JyV_2Qyej9fPOz6YtNgCaJtGpan4FzkFCbDisO16INxatgtzHt0000__y30000
 
-- code
-`@startuml  
+```- code
+@startuml  
 class Employee {  
     +employeeID: String    
     +name: String  
@@ -394,6 +396,7 @@ Employee "1" -- "1" PaymentMethod : has
 PaymentSystem ..> Employee : interacts with  
 PaymentSystem ..> PaymentMethod : interacts with  
   
-@enduml`  
+@enduml
+```  
 
 
