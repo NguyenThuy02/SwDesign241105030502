@@ -62,57 +62,57 @@ package "Data Access Layer" {
 2. Cơ chế phân tích
 Các cơ chế cần giải quyết trong bài toán và giải thích lý do:    
 2.1. Cơ chế bảo mật và kiểm soát quyền truy cập   
-•	Bảo vệ dữ liệu và chỉ cho phép họ truy cập thông tin của riêng mình.  
-•	Admin có quyền truy cập nâng cao để quản lý thông tin nhân viên.  
-•	Lý do: Để đảm bảo tính bảo mật và tuân thủ đúng quy định bảo mật dữ liệu.  
+- Bảo vệ dữ liệu và chỉ cho phép họ truy cập thông tin của riêng mình.  
+- Admin có quyền truy cập nâng cao để quản lý thông tin nhân viên.  
+- Lý do: Để đảm bảo tính bảo mật và tuân thủ đúng quy định bảo mật dữ liệu.  
 
 2.2. Cơ chế tính lương tự động   
-•	Tính toán lương và hoa hồng tự động dựa trên thời gian làm việc và đơn hàng.  
-•	Tính toán lương tăng ca (1,5x lương cơ bản) cho người làm việc quá 8 giờ/ngày.  
-•	Lý do: Giảm thiểu rủi ro khi tính toán thủ công và tăng hiệu quả, chính xác trong việc tính lương.  
+- Tính toán lương và hoa hồng tự động dựa trên thời gian làm việc và đơn hàng.  
+- Tính toán lương tăng ca (1,5x lương cơ bản) cho người làm việc quá 8 giờ/ngày.  
+- Lý do: Giảm thiểu rủi ro khi tính toán thủ công và tăng hiệu quả, chính xác trong việc tính lương.  
 
 2.3. Tích hợp dữ liệu cũ  
-•	Đảm bảo khả năng truy cập nhưng không thay đổi dữ liệu cũ từ Cơ sở dữ liệu quản lý dự án DB2 hệ thống.   
-•	Đảm bảo đồng bộ và cập nhật dữ liệu chính xác từ các hệ thống khác.  
-•	Lý do: Đảm bảo khả năng liên kết thông tin giữa hệ thống mới và hệ thống cũ để giảm chi phí và tránh thay đổi hệ thống.  
+- Đảm bảo khả năng truy cập nhưng không thay đổi dữ liệu cũ từ Cơ sở dữ liệu quản lý dự án DB2 hệ thống.   
+- Đảm bảo đồng bộ và cập nhật dữ liệu chính xác từ các hệ thống khác.  
+- Lý do: Đảm bảo khả năng liên kết thông tin giữa hệ thống mới và hệ thống cũ để giảm chi phí và tránh thay đổi hệ thống.  
 
 2.4. Cơ chế tạo báo cáo   
-•	Tạo các báo cáo chi tiết về số giờ làm việc, tổng lương và các dữ liệu khác.  
-•	Các báo cáo cho phép nhân viên truy cập dữ liệu của họ, trong khi Admin có quyền tạo báo cáo tổng hợp.  
-•	Lý do: Để theo dõi số giờ làm, tổng lương và dữ liệu liên quan một cách minh bạch, rõ ràng và chi tiết nhất.  
+- Tạo các báo cáo chi tiết về số giờ làm việc, tổng lương và các dữ liệu khác.  
+- Các báo cáo cho phép nhân viên truy cập dữ liệu của họ, trong khi Admin có quyền tạo báo cáo tổng hợp.  
+- Lý do: Để theo dõi số giờ làm, tổng lương và dữ liệu liên quan một cách minh bạch, rõ ràng và chi tiết nhất.  
 
 2.5. Cơ chế bảo trì và quản lý nhân viên    
-•	Admin cần có quyền bổ sung, xóa và cập nhật thông tin nhân viên.  
-•	Cung cấp các API để xử lý yêu cầu liên   
-•	Lý do: Cần có quy trình rõ ràng để Admin quản lý thông tin nhân viên một cách chính xác và linh hoạt.  
+- Admin cần có quyền bổ sung, xóa và cập nhật thông tin nhân viên.  
+- Cung cấp các API để xử lý yêu cầu liên   
+- Lý do: Cần có quy trình rõ ràng để Admin quản lý thông tin nhân viên một cách chính xác và linh hoạt.  
 
 2.6. Cơ chế thanh toán   
-•	Xử lý và quản lý các phương thức thanh toán (chuyển tài khoản, gửi qua bưu điện hoặc nhận trực tiếp).  
-•	Đảm bảo rằng thanh toán diễn ra chính xác vào thời gian quy định (thứ sáu hoặc vào ngày làm việc cuối cùng của tháng ).  
-•	Lý do: Đảm bảo quá trình thanh toán diễn ra chính xác, đúng lịch trình và theo nhu cầu của từng nhân viên.  
+- Xử lý và quản lý các phương thức thanh toán (chuyển tài khoản, gửi qua bưu điện hoặc nhận trực tiếp).  
+- Đảm bảo rằng thanh toán diễn ra chính xác vào thời gian quy định (thứ sáu hoặc vào ngày làm việc cuối cùng của tháng ).  
+- Lý do: Đảm bảo quá trình thanh toán diễn ra chính xác, đúng lịch trình và theo nhu cầu của từng nhân viên.  
   
 3. Phân tích ca sử dụng Payment
 - Xác định các lớp phân tích:  
 3.1. Employee (Nhân viên)  
-•	Thuộc tính:  
-o	employeeID: ID của nhân viên.  
-o	name: Tên nhân viên.  
-o	paymentMethod: Phương thức thanh toán hiện hành.  
-•	Quan hệ: Có mối quan hệ 1-1 với lớp PaymentMethod.  
+Thuộc tính:   
+- employeeID: ID của nhân viên.  
+- name: Tên nhân viên.  
+- paymentMethod: Phương thức thanh toán hiện hành.  
+Quan hệ: Có mối quan hệ 1-1 với lớp PaymentMethod.  
 
 3.2. PaymentMethod (Phương thức thanh toán)  
-•	Thuộc tính:  
-o	methodType: Loại phương thức thanh toán (nhận hàng, gửi thư, gửi trực tiếp).  
-o	address: Địa chỉ (nếu chọn "mail").  
-o	bankName: Tên ngân hàng (nếu chọn "gửi tiền trực tiếp").  
-o	accountNumber: Số tài khoản ngân hàng (nếu chọn "gửi tiền trực tiếp").  
-•	Quan hệ: Không có quan hệ với các lớp khác trong phân tích này.
+Thuộc tính:  
+- methodType: Loại phương thức thanh toán (nhận hàng, gửi thư, gửi trực tiếp).  
+- address: Địa chỉ (nếu chọn "mail").  
+- bankName: Tên ngân hàng (nếu chọn "gửi tiền trực tiếp").  
+- accountNumber: Số tài khoản ngân hàng (nếu chọn "gửi tiền trực tiếp").  
+Quan hệ: Không có quan hệ với các lớp khác trong phân tích này.
 
 3.3. PaymentSystem (Hệ thống thanh toán)  
-•	Phương pháp:  
-o	updatePaymentMethod(employeeID, paymentMethod): Cập nhật phương thức thanh toán cho nhân viên.  
-o	getPaymentMethods(): Lấy sẵn danh sách thanh toán phương thức.  
-•	Quan hệ: Tương tác Employeevà PaymentMethod.  
+Phương pháp:   
+- updatePaymentMethod(employeeID, paymentMethod): Cập nhật phương thức thanh toán cho nhân viên.  
+- getPaymentMethods(): Lấy sẵn danh sách thanh toán phương thức.  
+Quan hệ: Tương tác Employeevà PaymentMethod.  
 
 - Biểu đồ lớp mô tả các lớp phân tích và quan hệ:  
 •  Employee có quan hệ 1-1 với PaymentMethod (mỗi nhân viên chỉ có một phương thức thanh toán).  
@@ -158,43 +158,43 @@ PaymentSystem ..> PaymentMethod : interacts with
 - Xác định các lớp phân tích:  
 
 4.1. Employee (Nhân viên): Đại diện cho nhân viên tương tác với hệ thống để nhập hoặc gửi thẻ chấm công.  
-•	Thuộc tính:  
-o	employeeID: ID nhân viên  
-o	name: Tên nhân viên  
-o	position: Vị trí công tác  
-•	Quan hệ: Có mối quan hệ với lớp Timecard.  
+Thuộc tính:  
+- employeeID: ID nhân viên  
+- name: Tên nhân viên    
+- position: Vị trí công tác  
+Quan hệ: Có mối quan hệ với lớp Timecard.  
 
 4.2. Timecard (Thẻ chấm công): Đại diện cho bảng chấm công của nhân viên trong một kỳ lương.  
-•	Thuộc tính:  
-o	timecardID: ID của thẻ chấm công  
-o	startDate: Ngày bắt đầu của kỳ lương   
-o	endDate: Ngày kết thúc của kỳ lương  
-o	status: Thẻ chấm trạng thái (ví dụ: Đã gửi)  
-o	submitDate: Ngày chấm  
-•	Quan hệ: Có quan hệ với lớp TimecardEntry.  
+Thuộc tính:  
+- timecardID: ID của thẻ chấm công  
+- startDate: Ngày bắt đầu của kỳ lương   
+- endDate: Ngày kết thúc của kỳ lương  
+- status: Thẻ chấm trạng thái (ví dụ: Đã gửi)  
+- submitDate: Ngày chấm  
+Quan hệ: Có quan hệ với lớp TimecardEntry.  
 
 4.3. TimecardEntry (Dòng nhập thời gian): Giao diện cho một mục trong thẻ chấm, ghi lại số ngày và số giờ làm việc của nhân viên.   
-•	Thuộc tính:  
-o	date: Ngày làm việc  
-o	hoursWorked: Số giờ làm trong ngày  
-o	chargeNumber: Mã chi phí  
-•	Quan hệ: Mỗi Timecard có nhiều TimecardEntry.  
+Thuộc tính:  
+- date: Ngày làm việc  
+- hoursWorked: Số giờ làm trong ngày  
+- chargeNumber: Mã chi phí  
+Quan hệ: Mỗi Timecard có nhiều TimecardEntry.  
 
 4.4. ChargeNumber (Mã chi phí): Đại diện cho mã chi phí từ cơ sở dữ liệu Quản lý Dự án.  
-•	Thuộc tính:  
-o	chargeNumberID: ID mã chi phí  
-o	description: Mô tả mã chi phí  
-•	Quan hệ: Liên kết với TimecardEntry.
+Thuộc tính:    
+- chargeNumberID: ID mã chi phí  
+- description: Mô tả mã chi phí  
+Quan hệ: Liên kết với TimecardEntry.
 
 4.5. Project ManagementDB (Cơ sở quản lý dự án): Giao diện cơ sở dữ liệu Quản lý dự án.  
-•	Phương pháp:  
-o	getAvailableChargeNumbers(): Lấy chi phí mã hóa hiện có của danh sách.  
+Phương pháp:  
+- getAvailableChargeNumbers(): Lấy chi phí mã hóa hiện có của danh sách.  
 
-4.6 TimecardSystem (Hệ thống thẻ chấm công): Đại diện cho hệ thống xử lý thẻ chấm công, cam kết thực hiện các nhiệm vụ chính.  
-•	Phương pháp:  
-o	retrieveTimecard(employeeID): Lấy thẻ hiện tại của nhân viên  
-o	saveTimecard(timecard): Lưu thẻ chấm công  
-o	submitTimecard(timecard): Gửi thẻ chấm công  
+4.6 TimecardSystem (Hệ thống thẻ chấm công): Đại diện cho hệ thống xử lý thẻ chấm công, cam kết thực hiện các nhiệm vụ chính.    
+Phương pháp:  
+- retrieveTimecard(employeeID): Lấy thẻ hiện tại của nhân viên  
+- saveTimecard(timecard): Lưu thẻ chấm công  
+- submitTimecard(timecard): Gửi thẻ chấm công  
 
 - Biểu đồ lớp mô tả các lớp phân tích và quan hệ:  
 •	Employee có quan hệ 1-nhiều với Timecard (một nhân viên có thể có nhiều thẻ chấm công trong các kỳ lương khác nhau).  
@@ -398,5 +398,7 @@ PaymentSystem ..> PaymentMethod : interacts with
   
 @enduml
 ```  
+  
+Tham khảo website: https://www.planttext.com/
 
 
