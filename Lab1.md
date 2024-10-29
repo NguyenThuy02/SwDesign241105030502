@@ -32,18 +32,22 @@ package "Client Layer" {
   rectangle "Reporting Module"  
   rectangle "Windows Desktop Application"  
 }  
+  
 package "Business Logic Layer" {  
   rectangle "Payroll Processing Engine"  
   rectangle "Timecard Management"  
   rectangle "Commission Calculation"  
 }  
+  
 package "Integration Layer" {  
   rectangle "Payment Processing Module"  
 }  
+  
 package "Data Access Layer" {  
   database "Employee Database"  
   database "Project Management Database"  
 }  
+  
 "Reporting Module" --> "Payroll Processing Engine"  
 "Windows Desktop Application" --> "Payroll Processing Engine"  
 "Payroll Processing Engine" --> "Timecard Management"  
@@ -51,6 +55,7 @@ package "Data Access Layer" {
 "Payroll Processing Engine" --> "Payment Processing Module"  
 "Employee Database" <--> "Payroll Processing Engine"  
 "Project Management Database" <--> "Payroll Processing Engine"  
+  
 @enduml`  
 
 2. Cơ chế phân tích
