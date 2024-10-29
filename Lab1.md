@@ -109,7 +109,7 @@ accountNumber: Số tài khoản ngân hàng (nếu chọn "gửi tiền trực 
 - Quan hệ: Không có quan hệ với các lớp khác trong phân tích này.
 
 3.3. PaymentSystem (Hệ thống thanh toán)  
-- Phương pháp:   
+- Phương thức:   
 updatePaymentMethod(employeeID, paymentMethod): Cập nhật phương thức thanh toán cho nhân viên.  
 getPaymentMethods(): Lấy sẵn danh sách thanh toán phương thức.  
 - Quan hệ: Tương tác Employeevà PaymentMethod.  
@@ -187,11 +187,11 @@ Thuộc tính:
 Quan hệ: Liên kết với TimecardEntry.
 
 4.5. Project ManagementDB (Cơ sở quản lý dự án): Giao diện cơ sở dữ liệu Quản lý dự án.  
-Phương pháp:  
+Phương thức:  
 - getAvailableChargeNumbers(): Lấy chi phí mã hóa hiện có của danh sách.  
 
 4.6 TimecardSystem (Hệ thống thẻ chấm công): Đại diện cho hệ thống xử lý thẻ chấm công, cam kết thực hiện các nhiệm vụ chính.    
-Phương pháp:  
+Phương thức:  
 - retrieveTimecard(employeeID): Lấy thẻ hiện tại của nhân viên  
 - saveTimecard(timecard): Lưu thẻ chấm công  
 - submitTimecard(timecard): Gửi thẻ chấm công  
@@ -300,11 +300,11 @@ description: Mô tả chi phí mã hóa.
 Được liên kết TimecardEntry để xác định công việc chi phí.  
 
 5.5. Project ManagementDB (Cơ sở quản lý dự án)  
-- Phương pháp:  
+- Phương thức:  
 getAvailableChargeNumbers(): Lấy danh sách các chi phí mã hóa hiện có từ dự án quản lý cơ sở dữ liệu.  
 
 5.6. TimecardSystem (Hệ thống thẻ chấm công)  
-- Phương pháp:  
+- Phương thức:  
 retrieveTimecard(employeeID: String): Lấy thẻ hiện tại của nhân viên.  
 saveTimecard(timecard: Timecard): Lưu thẻ chấm công.  
 submitTimecard(timecard: Timecard): Gửi thẻ chấm công.  
@@ -323,7 +323,7 @@ accountNumber: Số tài khoản ngân hàng (dùng cho phương thức "gửi t
 Không có quan hệ trực tiếp với các lớp khác bên ngoài Employee.  
 
 5.8. PaymentSystem (Hệ thống thanh toán) 
-- Phương pháp:  
+- Phương thức:  
 updatePaymentMethod(employeeID: String, paymentMethod: PaymentMethod): Cập nhật phương thức thanh toán của nhân viên.  
 getPaymentMethods(): Lấy danh sách các phương thức thanh toán có sẵn.  
 - Quan hệ:  
