@@ -124,10 +124,10 @@ Nhiệm vụ của từng lớp phân tích
 •	PaymentMethod: Lưu trữ thông tin liên quan đến phương thức thanh toán mà nhân viên đã chọn.  
 •	PaymentSystem: Xử lý logic để cập nhật và xác thực phương thức thanh toán cho nhân viên.  
 
-- Sơ đồ lớp ca sử dụng Payment  
+Sơ đồ lớp ca sử dụng Payment  
 ![Diagram](https://www.planttext.com/api/plantuml/png/V551Ri8m4Bpx5IjE81KahbQ5EBG7f1OXmGUMU9LOZPt8km55Y9Tnw9FuGXiIqZfKzSNQ6NjcTlTw-LooO93AvIh9aHbUNPaNDH6S53I7kdhrec4hmVgqnJqwYf4IQqTUtacomcZO_2xLMNNw4NmtSRTgLvS3IJGc47CCxj5_h1_SCKcAoikwSdiAFJMqtTOivEwsLMbGA4eqVkptwT_E9XeEXJMjO4eIaJp-fjyiotC4BvfS_Q17yn5CfxSh7ew635d5oMUpnS-AD5Wl530HXgELx8-tGyN1XoLvq-p-2m00__y30000)  
 
-- Đường liên kết của sơ đồ: https://www.planttext.com/api/plantuml/png/V551Ri8m4Bpx5IjE81KahbQ5EBG7f1OXmGUMU9LOZPt8km55Y9Tnw9FuGXiIqZfKzSNQ6NjcTlTw-LooO93AvIh9aHbUNPaNDH6S53I7kdhrec4hmVgqnJqwYf4IQqTUtacomcZO_2xLMNNw4NmtSRTgLvS3IJGc47CCxj5_h1_SCKcAoikwSdiAFJMqtTOivEwsLMbGA4eqVkptwT_E9XeEXJMjO4eIaJp-fjyiotC4BvfS_Q17yn5CfxSh7ew635d5oMUpnS-AD5Wl530HXgELx8-tGyN1XoLvq-p-2m00__y30000
+Đường liên kết của sơ đồ: https://www.planttext.com/api/plantuml/png/V551Ri8m4Bpx5IjE81KahbQ5EBG7f1OXmGUMU9LOZPt8km55Y9Tnw9FuGXiIqZfKzSNQ6NjcTlTw-LooO93AvIh9aHbUNPaNDH6S53I7kdhrec4hmVgqnJqwYf4IQqTUtacomcZO_2xLMNNw4NmtSRTgLvS3IJGc47CCxj5_h1_SCKcAoikwSdiAFJMqtTOivEwsLMbGA4eqVkptwT_E9XeEXJMjO4eIaJp-fjyiotC4BvfS_Q17yn5CfxSh7ew635d5oMUpnS-AD5Wl530HXgELx8-tGyN1XoLvq-p-2m00__y30000
   
 ```- Code:     
 @startuml  
@@ -210,10 +210,10 @@ Nhiệm vụ của từng lớp phân tích
 •	TimecardSystem: Xử lý logic của các ca sử dụng, bao gồm truy xuất, lưu và gửi thẻ chấm công.  
 •	Project ManagementDB: Cung cấp sẵn các mã chi phí từ hệ thống quản lý dự án.  
 
-- Sơ đồ lớp ca sử dụng Maintain Timecard
+Sơ đồ lớp ca sử dụng Maintain Timecard
 ![Diagram](https://www.planttext.com/api/plantuml/png/Z5D1JiCm4Bpd5QkS2b8ZSRLGLQ0z8052AX9drraIGsnNzgQeGhoC0q_Y2xXDdBXf9CZ1qOvdPzUUzS_NzzmHjrIhAX4LTmwMQbEP7I9y9B3_i8rl5mnMPAKk6bnpXSV8nZX9qkWE_KnQpIUfK72R1qrguw7cePK59o-yNzi6T3w4F8zgDyYjrqh6oIVLbvhiBhIG3oHBKrltREmRvWoafWOL9RS5FjHgZPR1JHJryZ4QrEEyuI5pTCBApVXDFLhpYeBkkUO5AjIqk0wQ1TBLbikAhokCQxh96OCxwUWoHcUdvr_j7A4ASXPzQTnYs9sS6krrmsvxnppY1nDxakTlZSnZF_x1zdrsCvTUf32T-b-MdQVzs30ekKkwS9pLsCj064rSwfxVR7H9wR5Z32gflUj09XdSL9RD-kTmc0gqN923Tqdb63bg-6_ocDMiiyN1YpKgcVlftx_DNm000F__0m00)
 
-- Đường liên kết của sơ đồ: https://www.planttext.com/api/plantuml/png/Z5D1JiCm4Bpd5QkS2b8ZSRLGLQ0z8052AX9drraIGsnNzgQeGhoC0q_Y2xXDdBXf9CZ1qOvdPzUUzS_NzzmHjrIhAX4LTmwMQbEP7I9y9B3_i8rl5mnMPAKk6bnpXSV8nZX9qkWE_KnQpIUfK72R1qrguw7cePK59o-yNzi6T3w4F8zgDyYjrqh6oIVLbvhiBhIG3oHBKrltREmRvWoafWOL9RS5FjHgZPR1JHJryZ4QrEEyuI5pTCBApVXDFLhpYeBkkUO5AjIqk0wQ1TBLbikAhokCQxh96OCxwUWoHcUdvr_j7A4ASXPzQTnYs9sS6krrmsvxnppY1nDxakTlZSnZF_x1zdrsCvTUf32T-b-MdQVzs30ekKkwS9pLsCj064rSwfxVR7H9wR5Z32gflUj09XdSL9RD-kTmc0gqN923Tqdb63bg-6_ocDMiiyN1YpKgcVlftx_DNm000F__0m00
+Đường liên kết của sơ đồ: https://www.planttext.com/api/plantuml/png/Z5D1JiCm4Bpd5QkS2b8ZSRLGLQ0z8052AX9drraIGsnNzgQeGhoC0q_Y2xXDdBXf9CZ1qOvdPzUUzS_NzzmHjrIhAX4LTmwMQbEP7I9y9B3_i8rl5mnMPAKk6bnpXSV8nZX9qkWE_KnQpIUfK72R1qrguw7cePK59o-yNzi6T3w4F8zgDyYjrqh6oIVLbvhiBhIG3oHBKrltREmRvWoafWOL9RS5FjHgZPR1JHJryZ4QrEEyuI5pTCBApVXDFLhpYeBkkUO5AjIqk0wQ1TBLbikAhokCQxh96OCxwUWoHcUdvr_j7A4ASXPzQTnYs9sS6krrmsvxnppY1nDxakTlZSnZF_x1zdrsCvTUf32T-b-MdQVzs30ekKkwS9pLsCj064rSwfxVR7H9wR5Z32gflUj09XdSL9RD-kTmc0gqN923Tqdb63bg-6_ocDMiiyN1YpKgcVlftx_DNm000F__0m00
 
 
 
@@ -330,10 +330,10 @@ getPaymentMethods(): Lấy danh sách các phương thức thanh toán có sẵn
 Tương tác Employeeđể cập nhật và quản lý phương thức thanh toán.  
 Tương tác PaymentMethodđể lưu và lấy thông tin chi tiết về các phương thức thanh toán.  
 
-- Sơ đồ hợp nhất 2 ca sử dụng
+Sơ đồ hợp nhất 2 ca sử dụng
 ![Diagram](https://www.planttext.com/api/plantuml/png/Z5JDJjmm4BxdAQoSA2ehzHeXHEbog5GG4aWzpph3nX3RaJtPAgfuCWuyKby1PnCdjXDHzf3LZB_vyJVV-D_hswKbCDJAEkCrMCkkPLFh3f7zpLZ_mz7-kItOFHcXzeDVWSJOqsWhI6YLUA6JgEW6gT9bmUv2Ctl9ngeFGY87K_ggDDffrMEpMo1Nkl-EBQeoTJaSjJQ9RNTIXC6BwjUAJETRA9EKbMwD_QtDCxfh24M3brTWzdZRoXsQWlq8h3bzwFNPmxZqaYLQRaGJSJabkpFw2JdTW88zzbHkhtpEFTBt0uWQTZM6DUt9buBz4fREG-_5ylxtdIMKFfr1LneFw4zFbb9mUVtfo344U3_46UJm1otAS1wVGCzt3yNZsvH7ww5h4Zb2MHgqYGPse9vl5ye5pdMho4znGVbGDcQdRNg1H1sj4FJrG_r7TBZfHOVpr2BtSMpJakRVSdPsvlusczDytgA2LM2poLn73Mel6DUAGAWPFnnCGNaiu8BLGhabOAIpH3YRpSNyVXoN10rmikoFe6eD73JyV_2Qyej9fPOz6YtNgCaJtGpan4FzkFCbDisO16INxatgtzHt0000__y30000)
 
-- Đường liên kết của sơ đồ: https://www.planttext.com/api/plantuml/png/Z5JDJjmm4BxdAQoSA2ehzHeXHEbog5GG4aWzpph3nX3RaJtPAgfuCWuyKby1PnCdjXDHzf3LZB_vyJVV-D_hswKbCDJAEkCrMCkkPLFh3f7zpLZ_mz7-kItOFHcXzeDVWSJOqsWhI6YLUA6JgEW6gT9bmUv2Ctl9ngeFGY87K_ggDDffrMEpMo1Nkl-EBQeoTJaSjJQ9RNTIXC6BwjUAJETRA9EKbMwD_QtDCxfh24M3brTWzdZRoXsQWlq8h3bzwFNPmxZqaYLQRaGJSJabkpFw2JdTW88zzbHkhtpEFTBt0uWQTZM6DUt9buBz4fREG-_5ylxtdIMKFfr1LneFw4zFbb9mUVtfo344U3_46UJm1otAS1wVGCzt3yNZsvH7ww5h4Zb2MHgqYGPse9vl5ye5pdMho4znGVbGDcQdRNg1H1sj4FJrG_r7TBZfHOVpr2BtSMpJakRVSdPsvlusczDytgA2LM2poLn73Mel6DUAGAWPFnnCGNaiu8BLGhabOAIpH3YRpSNyVXoN10rmikoFe6eD73JyV_2Qyej9fPOz6YtNgCaJtGpan4FzkFCbDisO16INxatgtzHt0000__y30000
+Đường liên kết của sơ đồ: https://www.planttext.com/api/plantuml/png/Z5JDJjmm4BxdAQoSA2ehzHeXHEbog5GG4aWzpph3nX3RaJtPAgfuCWuyKby1PnCdjXDHzf3LZB_vyJVV-D_hswKbCDJAEkCrMCkkPLFh3f7zpLZ_mz7-kItOFHcXzeDVWSJOqsWhI6YLUA6JgEW6gT9bmUv2Ctl9ngeFGY87K_ggDDffrMEpMo1Nkl-EBQeoTJaSjJQ9RNTIXC6BwjUAJETRA9EKbMwD_QtDCxfh24M3brTWzdZRoXsQWlq8h3bzwFNPmxZqaYLQRaGJSJabkpFw2JdTW88zzbHkhtpEFTBt0uWQTZM6DUt9buBz4fREG-_5ylxtdIMKFfr1LneFw4zFbb9mUVtfo344U3_46UJm1otAS1wVGCzt3yNZsvH7ww5h4Zb2MHgqYGPse9vl5ye5pdMho4znGVbGDcQdRNg1H1sj4FJrG_r7TBZfHOVpr2BtSMpJakRVSdPsvlusczDytgA2LM2poLn73Mel6DUAGAWPFnnCGNaiu8BLGhabOAIpH3YRpSNyVXoN10rmikoFe6eD73JyV_2Qyej9fPOz6YtNgCaJtGpan4FzkFCbDisO16INxatgtzHt0000__y30000
 
 ```- code
 @startuml  
@@ -356,7 +356,7 @@ class TimecardEntry {
     +date: Date  
     +hoursWorked: int  
     +chargeNumber: ChargeNumber  
-}  
+}    
   
 class ChargeNumber {  
     +chargeNumberID: String  
