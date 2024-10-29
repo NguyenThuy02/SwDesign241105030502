@@ -94,35 +94,35 @@ Các cơ chế cần giải quyết trong bài toán và giải thích lý do:
 3. Phân tích ca sử dụng Payment
 Xác định các lớp phân tích:  
 3.1. Employee (Nhân viên)  
-Thuộc tính:   
-- employeeID: ID của nhân viên.  
-- name: Tên nhân viên.  
-- paymentMethod: Phương thức thanh toán hiện hành.  
-Quan hệ: Có mối quan hệ 1-1 với lớp PaymentMethod.  
+- Thuộc tính:   
+employeeID: ID của nhân viên.  
+name: Tên nhân viên.  
+paymentMethod: Phương thức thanh toán hiện hành.  
+- Quan hệ: Có mối quan hệ 1-1 với lớp PaymentMethod.  
 
 3.2. PaymentMethod (Phương thức thanh toán)  
-Thuộc tính:  
-- methodType: Loại phương thức thanh toán (nhận hàng, gửi thư, gửi trực tiếp).  
-- address: Địa chỉ (nếu chọn "mail").  
-- bankName: Tên ngân hàng (nếu chọn "gửi tiền trực tiếp").  
-- accountNumber: Số tài khoản ngân hàng (nếu chọn "gửi tiền trực tiếp").  
-Quan hệ: Không có quan hệ với các lớp khác trong phân tích này.
+- Thuộc tính:  
+methodType: Loại phương thức thanh toán (nhận hàng, gửi thư, gửi trực tiếp).  
+address: Địa chỉ (nếu chọn "mail").  
+bankName: Tên ngân hàng (nếu chọn "gửi tiền trực tiếp").  
+accountNumber: Số tài khoản ngân hàng (nếu chọn "gửi tiền trực tiếp").  
+- Quan hệ: Không có quan hệ với các lớp khác trong phân tích này.
 
 3.3. PaymentSystem (Hệ thống thanh toán)  
-Phương pháp:   
-- updatePaymentMethod(employeeID, paymentMethod): Cập nhật phương thức thanh toán cho nhân viên.  
-- getPaymentMethods(): Lấy sẵn danh sách thanh toán phương thức.  
-Quan hệ: Tương tác Employeevà PaymentMethod.  
+- Phương pháp:   
+updatePaymentMethod(employeeID, paymentMethod): Cập nhật phương thức thanh toán cho nhân viên.  
+getPaymentMethods(): Lấy sẵn danh sách thanh toán phương thức.  
+- Quan hệ: Tương tác Employeevà PaymentMethod.  
 
 Biểu đồ lớp mô tả các lớp phân tích và quan hệ:  
-•  Employee có quan hệ 1-1 với PaymentMethod (mỗi nhân viên chỉ có một phương thức thanh toán).  
-•  PaymentMethod có quan hệ 1-1 với Employee.  
-•  PaymentSystem tương tác với cả Employee và PaymentMethod để cập nhật và lấy thông tin.  
+- Employee có quan hệ 1-1 với PaymentMethod (mỗi nhân viên chỉ có một phương thức thanh toán).  
+- PaymentMethod có quan hệ 1-1 với Employee.  
+- PaymentSystem tương tác với cả Employee và PaymentMethod để cập nhật và lấy thông tin.  
 
 Nhiệm vụ của từng lớp phân tích  
-•	Employee: Tương tác với hệ thống để chọn và cập nhật phương thức toán toán.  
-•	PaymentMethod: Lưu trữ thông tin liên quan đến phương thức thanh toán mà nhân viên đã chọn.  
-•	PaymentSystem: Xử lý logic để cập nhật và xác thực phương thức thanh toán cho nhân viên.  
+- Employee: Tương tác với hệ thống để chọn và cập nhật phương thức toán toán.  
+- PaymentMethod: Lưu trữ thông tin liên quan đến phương thức thanh toán mà nhân viên đã chọn.  
+- PaymentSystem: Xử lý logic để cập nhật và xác thực phương thức thanh toán cho nhân viên.  
 
 Sơ đồ lớp ca sử dụng Payment  
 ![Diagram](https://www.planttext.com/api/plantuml/png/V551Ri8m4Bpx5IjE81KahbQ5EBG7f1OXmGUMU9LOZPt8km55Y9Tnw9FuGXiIqZfKzSNQ6NjcTlTw-LooO93AvIh9aHbUNPaNDH6S53I7kdhrec4hmVgqnJqwYf4IQqTUtacomcZO_2xLMNNw4NmtSRTgLvS3IJGc47CCxj5_h1_SCKcAoikwSdiAFJMqtTOivEwsLMbGA4eqVkptwT_E9XeEXJMjO4eIaJp-fjyiotC4BvfS_Q17yn5CfxSh7ew635d5oMUpnS-AD5Wl530HXgELx8-tGyN1XoLvq-p-2m00__y30000)  
@@ -196,19 +196,19 @@ Phương pháp:
 - saveTimecard(timecard): Lưu thẻ chấm công  
 - submitTimecard(timecard): Gửi thẻ chấm công  
 
-Biểu đồ lớp mô tả các lớp phân tích và quan hệ:  
-•	Employee có quan hệ 1-nhiều với Timecard (một nhân viên có thể có nhiều thẻ chấm công trong các kỳ lương khác nhau).  
-•	Timecard có quan hệ 1-nhiều với TimecardEntry (một thẻ chấm công có nhiều dòng nhập thời gian cho công việc từng ngày).  
-•	TimecardEntry có quan hệ n-1 với ChargeNumber (một dòng nhập có thể liên kết với một công cụ mã hóa).  
-•	TimecardSystem và Project ManagementDB là hai lớp quản lý hệ thống xử lý các yêu cầu từ phía Employee.  
+Biểu đồ lớp mô tả các lớp phân tích và quan hệ:   
+- Employee có quan hệ 1-nhiều với Timecard (một nhân viên có thể có nhiều thẻ chấm công trong các kỳ lương khác nhau).  
+- Timecard có quan hệ 1-nhiều với TimecardEntry (một thẻ chấm công có nhiều dòng nhập thời gian cho công việc từng ngày).  
+- TimecardEntry có quan hệ n-1 với ChargeNumber (một dòng nhập có thể liên kết với một công cụ mã hóa).  
+- TimecardSystem và Project ManagementDB là hai lớp quản lý hệ thống xử lý các yêu cầu từ phía Employee.  
 
 Nhiệm vụ của từng lớp phân tích  
-•	Employee: Tương tác với hệ thống để nhập, cập nhật và gửi thẻ chấm công.  
-•	Timecard: Lưu trữ thông tin về thời gian làm việc, trạng thái và kỳ lương.  
-•	TimecardEntry: Ghi nhận chi tiết từng ngày làm việc và số giờ làm cho mã chi phí.  
-•	ChargeNumber: Cung cấp thông tin mã hóa chi phí từ cơ sở dữ liệu Quản lý Dự án.  
-•	TimecardSystem: Xử lý logic của các ca sử dụng, bao gồm truy xuất, lưu và gửi thẻ chấm công.  
-•	Project ManagementDB: Cung cấp sẵn các mã chi phí từ hệ thống quản lý dự án.  
+- Employee: Tương tác với hệ thống để nhập, cập nhật và gửi thẻ chấm công.  
+- Timecard: Lưu trữ thông tin về thời gian làm việc, trạng thái và kỳ lương.  
+- TimecardEntry: Ghi nhận chi tiết từng ngày làm việc và số giờ làm cho mã chi phí.  
+- ChargeNumber: Cung cấp thông tin mã hóa chi phí từ cơ sở dữ liệu Quản lý Dự án.  
+- TimecardSystem: Xử lý logic của các ca sử dụng, bao gồm truy xuất, lưu và gửi thẻ chấm công.  
+- Project ManagementDB: Cung cấp sẵn các mã chi phí từ hệ thống quản lý dự án.  
 
 Sơ đồ lớp ca sử dụng Maintain Timecard
 ![Diagram](https://www.planttext.com/api/plantuml/png/Z5D1JiCm4Bpd5QkS2b8ZSRLGLQ0z8052AX9drraIGsnNzgQeGhoC0q_Y2xXDdBXf9CZ1qOvdPzUUzS_NzzmHjrIhAX4LTmwMQbEP7I9y9B3_i8rl5mnMPAKk6bnpXSV8nZX9qkWE_KnQpIUfK72R1qrguw7cePK59o-yNzi6T3w4F8zgDyYjrqh6oIVLbvhiBhIG3oHBKrltREmRvWoafWOL9RS5FjHgZPR1JHJryZ4QrEEyuI5pTCBApVXDFLhpYeBkkUO5AjIqk0wQ1TBLbikAhokCQxh96OCxwUWoHcUdvr_j7A4ASXPzQTnYs9sS6krrmsvxnppY1nDxakTlZSnZF_x1zdrsCvTUf32T-b-MdQVzs30ekKkwS9pLsCj064rSwfxVR7H9wR5Z32gflUj09XdSL9RD-kTmc0gqN923Tqdb63bg-6_ocDMiiyN1YpKgcVlftx_DNm000F__0m00)
