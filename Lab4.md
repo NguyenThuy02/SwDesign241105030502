@@ -1,6 +1,6 @@
 ## Bài thực hành Lab4.md  
 ### Thiết kế các ca sử dụng cho hệ thống "Payroll System" và giải thích lý do  
-**1.Use case Login**    
+**1. Use case Login**    
 **Mô tả chi tiết**  
 Chức năng: Xác thực thông tin đăng nhập của người dùng.  
 Mục tiêu: Xác thực thông tin đăng nhập của người dùng để đảm bảo quyền truy cập hợp lệ vào hệ thống, bảo vệ dữ liệu và điều hướng người dùng đến giao diện chính.  
@@ -172,5 +172,4 @@ Link sơ đồ:  https://www.planttext.com/api/plantuml/png/L94zJWCn48NxESLe-nGa
 Sơ đồ:  
 ![Diagram](https://www.planttext.com/api/plantuml/png/L94zJWCn48NxESLe-nGa7GLAYEY8516W7pb3ME8VP7iBdus28t45REyOByLAC-zzw_4y_tnzRqCa7oUZWLHq7eUTJVWIs0z8eHRDU32VsYNcQhIccKVlFbX5F92bY_miTKDEAKGskDTENQi_2xLlp3tPg-WLAVtSza6ZZJ90Qe0fiAB0E3owosZdc-zlkdoW3EOFdqUJ9NyMPDsHfydYaP9tMekv0IZhusfrLqx3MzmfnI5W7G8j0V7NsPyN_Xi24i22U6K_lgLEB28GQfEfKtcITfkyfIjZeMUnGCKii64RGIBvHsIb-EgTSz2mPNikp_qB003__mC0)  
   
-  Tham khảo website: https://www.planttext.com/
-
+  Tham khảo website: https://www.planttext.com/  
